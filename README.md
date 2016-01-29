@@ -1,30 +1,30 @@
-# electron-quick-start
+# Electron & Elm basic setup
 
-**Clone and run for a quick way to see an Electron in action.**
+This is a minimal Electron application built with Elm based on the [Electron
+quickstart repository](https://github.com/atom/electron-quick-start).
 
-This is a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start) within the Electron documentation.
+Quick file overview:
 
-A basic Electron application needs just these files:
-
-- `index.html` - A web page to render.
+- `index.html` - A web page that simply mounts the Elm application.
+- `Main.elm` - The Elm application.
 - `main.js` - Starts the app and creates a browser window to render HTML.
 - `package.json` - Points to the app's main file and lists its details and dependencies.
+- `elm-package.json` - Elm package definition.
 
-You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start).
 
 ## To Use
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+The script expects the compiled Elm code in `elm.js`, so compile the module like
+this:
 
-```bash
-# Clone this repository
-git clone https://github.com/atom/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies and run the app
-npm install && npm start
-```
+    elm make Main.elm --output elm.js
 
-Learn more about Electron and its API in the [documentation](http://electron.atom.io/docs/latest).
+Then simply run Electron on this folder:
 
-#### License [CC0 (Public Domain)](LICENSE.md)
+    electron .
+
+
+## License
+
+It's under [CC0 (Public Domain)](LICENSE.md) like Electron's quickstart
+repository.
