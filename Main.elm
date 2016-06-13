@@ -1,9 +1,13 @@
-import Html exposing (text)
-import StartApp.Simple exposing (start)
+module Main exposing (..)
 
+import Html
+import Html.App
+
+
+main : Program Never
 main =
-  start
-    { model = 0
-    , view = \_ -> \_ -> text "hello"
-    , update = \_ -> \_ -> 0
-    }
+    Html.App.beginnerProgram
+        { model = 0
+        , view = \_ -> Html.text "hello"
+        , update = \_ _ -> 0
+        }
