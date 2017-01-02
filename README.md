@@ -17,7 +17,7 @@ Quick file overview:
 The script expects the compiled Elm code in `elm.js`, so compile the module like
 this:
 
-    elm make Main.elm --output elm.js
+    elm make Todo.elm --output elm.js
 
 Then simply run Electron on this folder:
 
